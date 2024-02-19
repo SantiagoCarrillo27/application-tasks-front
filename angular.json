@@ -31,7 +31,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "application-tasks-front",
               "budgets": [
                 {
                   "type": "initial",
