@@ -7,6 +7,7 @@ import { PrivateTasksComponent } from './components/private-tasks/private-tasks.
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AuthGuard } from './auth.guard';
+// import { LoaderComponent } from './components/loader/loader.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
     path: 'signup',
     component: SignupComponent,
   },
+  // {
+  //   path: 'loader',
+  //   component: LoaderComponent
+  // },
   {
     path: '**',
     redirectTo: '/tasks',

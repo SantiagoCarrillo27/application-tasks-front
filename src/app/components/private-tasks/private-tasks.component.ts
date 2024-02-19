@@ -12,6 +12,7 @@ export class PrivateTasksComponent {
   constructor(private taskService:TasksService){}
 
   tasks:Task[] = [];
+  loading:boolean = true;
 
   ngOnInit(){
     this.taskService.getTasks()
@@ -19,9 +20,14 @@ export class PrivateTasksComponent {
       res => {
         console.log(res);
         this.tasks = res;
+        this.loading = false;
 
       },
-      err => console.log(err)
+      (err) =>{
+      console.log(err)
+      this.loading = false
+      }
+
     );
   }
 
